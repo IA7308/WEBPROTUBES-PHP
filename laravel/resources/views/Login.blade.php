@@ -19,10 +19,6 @@
                     <input type="text" name="email" id="Uname-id" class="text-box" placeholder="Email"
                         value="{{ isset($data)?$data->email:'' }}" required>
                 </div>
-                <div class="mb-3">
-                    <input type="password" name="password" id="P-id" class="text-box" placeholder="Password"
-                        value="{{ isset($data)?$data->password:'' }}" required>
-                </div>
 
                 <div class="mb-3">
                     <input type="submit" value="Sign In" class="btn btn-primary" id="signInbtn-id" name="signInbtn"
