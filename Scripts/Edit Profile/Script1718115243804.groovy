@@ -17,3 +17,25 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('http://127.0.0.1:8000/Login')
+
+WebUI.setText(findTestObject('Object Repository/Page_Login HealthSis/input_Login_email'), 'herdiardana@gmail.com')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_Login HealthSis/input_Login_password'), 'EpplGP+PMAXYxQCSPvD4Mw==')
+
+WebUI.click(findTestObject('Object Repository/Page_Login HealthSis/input_Login_signInbtn'))
+
+WebUI.click(findTestObject('Object Repository/Page_Dashboard/a_herdiardn'))
+
+WebUI.setText(findTestObject('Object Repository/Page_Profil Saya/input_No HP_NoHP'), '08889407551')
+
+WebUI.setText(findTestObject('Object Repository/Page_Profil Saya/input_Status_Status'), 'Mahasiswa')
+
+WebUI.setText(findTestObject('Object Repository/Page_Profil Saya/input_Note_Note'), '-')
+
+WebUI.click(findTestObject('Object Repository/Page_Profil Saya/button_Simpan'))
+
+WebUI.click(findTestObject('Object Repository/Page_Profil Saya/div_Edit Profile                           _452345'))
+

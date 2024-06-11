@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_SQLSTATE23000 Integrity constraint viol_501b98</name>
+   <tag></tag>
+   <elementGuidId>692c9e97-ed3f-4fb9-8c7e-3a507ca40f6a</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//main[@id='exception']/div/div/div/div</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.line-clamp-2</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>d866b5ff-9c65-40b6-9cfe-a838f44988ac</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>line-clamp-2</value>
+      <webElementGuid>652a3a10-f204-440d-81da-db2e57782ff3</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'LastName' cannot be null </value>
+      <webElementGuid>06450e02-b5c3-4f63-b693-ab7b9b514e60</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;exception&quot;)/div[@class=&quot;overflow-hidden&quot;]/div[@class=&quot;px-6 @lg:px-10 py-8 overflow-x-auto&quot;]/div[@class=&quot;my-4 font-semibold leading-snug text-xl&quot;]/div[@class=&quot;line-clamp-2&quot;]</value>
+      <webElementGuid>e5b4934a-2711-45db-bfd5-806d79f95a2f</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//main[@id='exception']/div/div/div/div</value>
+      <webElementGuid>33a36615-5fa1-4dc8-b891-120c17e29ed4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='PHP'])[1]/following::div[2]</value>
+      <webElementGuid>ff391f40-a932-417e-bbe6-d6d3a3843bca</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='QueryException'])[1]/following::div[3]</value>
+      <webElementGuid>f60c5937-3937-42f2-b079-83f303605f55</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='insert'])[1]/preceding::div[1]</value>
+      <webElementGuid>16d6ac43-c2a8-47a0-bdca-08a21522764a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='into'])[1]/preceding::div[1]</value>
+      <webElementGuid>d7341ee7-53f5-4b2c-8a7b-62c45d029483</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div/div/div/div</value>
+      <webElementGuid>6b705f22-9698-42ff-9861-6637f1a3b873</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = concat(&quot;SQLSTATE[23000]: Integrity constraint violation: 1048 Column &quot; , &quot;'&quot; , &quot;LastName&quot; , &quot;'&quot; , &quot; cannot be null &quot;) or . = concat(&quot;SQLSTATE[23000]: Integrity constraint violation: 1048 Column &quot; , &quot;'&quot; , &quot;LastName&quot; , &quot;'&quot; , &quot; cannot be null &quot;))]</value>
+      <webElementGuid>04090768-bc36-4597-98df-b6d2fca86852</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

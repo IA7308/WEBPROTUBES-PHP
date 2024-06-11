@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Forgot your password_cms_data cms_data_login</name>
+   <tag></tag>
+   <elementGuidId>ddb4b683-511c-4dfe-929d-6c1b7fa69bf3</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='kc-content-wrapper']/div/div[2]/div[2]/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>a.cms_data.cms_data_login</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>568b326e-2804-494a-94c3-6b942ea054a9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>cms_data cms_data_login</value>
+      <webElementGuid>15e554b3-aee5-44cd-a1da-ccd2e8dd568a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://katalon.com/state-quality-2024-25?&amp;utm_campaign=LG_SOQ24&amp;utm_medium=login&amp;utm_source=katalon&amp;utm_content=waitlist</value>
+      <webElementGuid>c4d17671-34ff-4761-afa2-f5ee861135ff</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>target</name>
+      <type>Main</type>
+      <value>_blank</value>
+      <webElementGuid>f7958b21-8b78-4033-82f8-bdc3fbf1004f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;kc-content-wrapper&quot;)/div[@class=&quot;wrapSignIn login_screen&quot;]/div[@class=&quot;main_content&quot;]/div[@class=&quot;right_content&quot;]/a[@class=&quot;cms_data cms_data_login&quot;]</value>
+      <webElementGuid>5019a037-d54b-45ef-9663-76f99c0817cd</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='kc-content-wrapper']/div/div[2]/div[2]/a</value>
+      <webElementGuid>eff00ef9-bdb8-4ff0-b06f-c3414b68a6f3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Forgot your password?'])[1]/following::a[1]</value>
+      <webElementGuid>ebf1fa8c-09f5-44da-b9d6-b8d70762cfbc</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Sign up'])[1]/following::a[2]</value>
+      <webElementGuid>bfdac7c9-dcd7-4df6-bd52-5f8effdc2f2a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://katalon.com/state-quality-2024-25?&amp;utm_campaign=LG_SOQ24&amp;utm_medium=login&amp;utm_source=katalon&amp;utm_content=waitlist')]</value>
+      <webElementGuid>5dc6792c-6b51-42c7-8a2f-21cb06f50fb3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/a</value>
+      <webElementGuid>2ac88c17-d4f5-477c-afd4-a98a02e883d9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://katalon.com/state-quality-2024-25?&amp;utm_campaign=LG_SOQ24&amp;utm_medium=login&amp;utm_source=katalon&amp;utm_content=waitlist']</value>
+      <webElementGuid>5bb8c882-a0e8-4be9-af86-bd646fb1b3ee</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

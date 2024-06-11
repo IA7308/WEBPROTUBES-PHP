@@ -17,3 +17,27 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('http://127.0.0.1:8000/Login')
+
+WebUI.setText(findTestObject('Object Repository/Page_Login HealthSis/input_Login_email'), 'herdiardana@gmail.com')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_Login HealthSis/input_Login_password'), 'EpplGP+PMAXYxQCSPvD4Mw==')
+
+WebUI.click(findTestObject('Page_Login HealthSis/input_Login_signInbtn'))
+
+WebUI.click(findTestObject('Object Repository/Page_Dashboard/a_Artikel'))
+
+WebUI.click(findTestObject('Object Repository/Page_Artikel/input_SignOut_CreateArtikel'))
+
+WebUI.setText(findTestObject('Object Repository/Page_Create-Artikel/input_Judul_Judul'), 'Event')
+
+WebUI.click(findTestObject('Object Repository/Page_Create-Artikel/img'))
+
+WebUI.setText(findTestObject('Object Repository/Page_Create-Artikel/textarea_Isi Artikel_Deskripsi'), 'Ikut event jalan sehat besok yuk di bandung!')
+
+WebUI.click(findTestObject('Object Repository/Page_Create-Artikel/button_Submit'))
+
+WebUI.click(findTestObject('Object Repository/Page_Artikel/html_Artikel            katalonfont-familym_f5cc1f'))
+
