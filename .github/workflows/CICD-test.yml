@@ -38,11 +38,10 @@ jobs:
       #excecute Katalon
     - name: Extract and Execute Katalon Studio tests
       run: |
-       tar xvzf /C/Users/ASUS/Katalon\ Studio/testing\ konpel/Katalon_Studio_Linux.tar.gz -C /C/Users/ASUS/Katalon\ Studio/testing\ konpel/Katalon_Studio
-       /C/Users/ASUS/Katalon\ Studio/testing\ konpel/Katalon_Studio/katalonc.sh -runMode=console -projectPath="/C:/Users/ASUS/Katalon Studio/testing konpel" -reportFolder="/C:/Users/ASUS/Katalon Studio/testing konpel/Reports/20240611_213209/Testing/20240611_213209" -browserType="Chrome" -apiKey=your_api_key
+        tar xvzf C:\\Users\\ASUS\\Katalon\\ Studio\\testing\\ konpel\\Katalon_Studio_Linux.tar.gz -C C:\\Users\\ASUS\\Katalon\\ Studio\\testing\\ konpel\\Katalon_Studio
+        C:\\Users\\ASUS\\Katalon\\ Studio\\testing\\ konpel\\Katalon_Studio\\katalonc.bat -runMode=console -projectPath="C:\\Users\\ASUS\\Katalon Studio\\testing konpel" -reportFolder="C:\\Users\\ASUS\\Katalon Studio\\testing konpel\\Reports\\20240611_213209\\Testing\\20240611_213209" -browserType="Chrome" -apiKey=your_api_key
       working-directory: laravel
-      shell: bash
-
+      shell: cmd
       # Archive Katalon test reports as artifact
     - name: Archive Katalon Test Reports
       uses: actions/upload-artifact@v2
