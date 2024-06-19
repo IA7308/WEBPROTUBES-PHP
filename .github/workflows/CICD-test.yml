@@ -35,19 +35,21 @@ jobs:
       run: |
         mkdir -p database
         touch database/database.sqlite
-    - name: Download Katalon Studio
+      #excecute Katalon
+    - name: Execute Katalon Studio tests
       run: |
         wget -O Katalon_Studio.tar.gz "https://download.katalon.com/7.9.0/Katalon_Studio_Linux.tar.gz"
         tar xvzf Katalon_Studio.tar.gz
-    - name: Execute Katalon Studio tests
-      run: ./Katalon_Studio/katalonc.sh -runMode=console -projectPath=path/to/your/project -reportFolder=KatalonReports -browserType="Chrome" -apiKey=your_api_key
+        ./Katalon_Studio/katalonc.sh -runMode=console -projectPath="C:\\Users\\ASUS\\Katalon Studio\\testing konpel" -reportFolder=KatalonReports -browserType="Chrome" -apiKey=your_api_key
+      working-directory: laravel
+      shell: bash
 
       # Archive Katalon test reports as artifact
     - name: Archive Katalon Test Reports
       uses: actions/upload-artifact@v2
       with:
         name: Katalon-Test-Reports
-        path: Katalon_Studio/KatalonReports
+        path: C:\Users\ASUS\Katalon Studio\testing konpel\Reports\20240611_213209\Testing\20240611_213209
     - name: Execute tests (Unit and Feature tests) via PHPUnit/Pest
       env:
         DB_CONNECTION: sqlite
