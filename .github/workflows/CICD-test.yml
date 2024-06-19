@@ -26,8 +26,10 @@ jobs:
       working-directory: laravel
     - name: Generate key
       run: php artisan key:generate
+      working-directory: laravel
     - name: Directory Permissions
       run: chmod -R 777 storage bootstrap/cache
+      working-directory: laravel
     - name: Create Database
       run: |
         mkdir -p database
