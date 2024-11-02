@@ -65,7 +65,8 @@ Route::get('/Artikel/{id}', [ArtikelController::class, 'show']);
 Route::put('/artikel/{id}/{iduser}/update', [ArtikelController::class, 'update'])->name('artikel.update');
 Route::get('/artikel/{id}/{iduser}/edit', [ArtikelController::class, 'edit'])->name('artikel.edit');
 Route::get('/artikel/{id}/delete', [ArtikelController::class, 'delete'])->name('artikel.delete');
+Route::get('/artikel/search', [ArtikelController::class, 'search'])->name('artikel.search');
 //tesss
 Route::get('/', function () {
-    return view('welcome');
+    return view('Login');
 });
