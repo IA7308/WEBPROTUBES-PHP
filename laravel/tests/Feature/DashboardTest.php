@@ -9,6 +9,8 @@ use Tests\TestCase;
 
 class DashboardTest extends TestCase
 {
+    use RefreshDatabase; 
+
     /** @test */
     public function it_can_display_products_on_dashboard()
     {
