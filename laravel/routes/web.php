@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Dashboard
-Route::get('/Dashboard', [HealthSisController::class, 'index']);
+Route::get('/Dashboard', [DashboardController::class, 'index']);
 Route::get('/createDashboard', [DashboardController::class, 'create']);
 Route::post('/storeDashboard', [DashboardController::class, 'store']);
 Route::delete('/dashboard/{id}/delete', [DashboardController::class, 'destroy']);

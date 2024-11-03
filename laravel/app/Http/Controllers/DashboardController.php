@@ -7,7 +7,21 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    //
+    public function index()
+    {
+        $prods = dashboard::all();
+        $newProds = dashboard::orderBy('created_at', 'desc')->take(6)->get();
+        $totalProducts = dashboard::count();
+        $mostViewed = dashboard::orderBy('views', 'desc')->first();
+        $topCategory = dashboard::select('category')
+            ->groupBy('category')
+            ->orderByRaw('COUNT(*) DESC')
+            ->first();
+        $testimonials = [];
+
+        return view('dashboard', compact('prods', 'newProds', 'totalProducts', 'mostViewed', 'topCategory', 'testimonials'));
+    }
+
     public function create()
     {
         return view('Add-Carouse', [
@@ -16,9 +30,9 @@ class DashboardController extends Controller
             'action' => '/storeDashboard'
         ]);
     }
+
     public function store(Request $request)
     {
-
         $prod = new dashboard;
         $prod->Judul = $request->Judul;
         if ($request->file('Image')) {
@@ -34,14 +48,11 @@ class DashboardController extends Controller
 
     public function destroy($id)
     {
-        // Gunakan model yang bersesuaian untuk menghapus data
         $data = dashboard::findOrFail($id);
         $data->delete();
-    
-        // Redirect ke halaman sebelumnya atau halaman yang diinginkan setelah data dihapus
         return redirect('/Dashboard');
-
     }
+
     public function edit($id)
     {
         return view('Add-Carouse', [
@@ -51,6 +62,7 @@ class DashboardController extends Controller
             'data' => dashboard::find($id)
         ]);
     }
+
     public function update(Request $request, $id)
     {
         $prod = dashboard::find($id);
@@ -63,9 +75,6 @@ class DashboardController extends Controller
         }
         $prod->Deskripsi = $request->Deskripsi;
         $prod->save();
-        return redirect('/Dashboard')->with('msg', 'Tambah berhasil');
-
+        return redirect('/Dashboard')->with('msg', 'Update berhasil');
     }
-    
-
 }
