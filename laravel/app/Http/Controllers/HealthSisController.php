@@ -12,7 +12,8 @@ use Carbon\Carbon;
 class HealthSisController extends Controller
 {
 
-    public function index(){
+    public function index()
+    {
         $prods = dashboard::get();
         return view("Dashboard", compact('prods'));
     }
@@ -77,6 +78,50 @@ class HealthSisController extends Controller
         return redirect('/Login')->with('msg', 'Akun Berhasil dibuat');
     }
 
+    public function changePassword(Request $request, $id)
+    {
+        $request->validate([
+            'current_password' => 'required',
+            'new_password' => 'required',
+            'confirm_password' => 'required'
+        ]);
+
+        $user = HealthSis::find($id);
+
+        if (!$user) {
+            return response()->json(['message' => 'User not found'], 404);
+        }
+
+        if (!Hash::check($request->current_password, $user->password)) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Password lama tidak sesuai'
+            ]);
+        }
+
+        if ($request->new_password !== $request->confirm_password) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Konfirmasi password baru tidak sesuai'
+            ]);
+        }
+
+        if ($request->current_password === $request->new_password) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Password baru harus berbeda dengan password lama'
+            ]);
+        }
+
+        $user->password = Hash::make($request->new_password);
+        $user->save();
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Password berhasil diubah'
+        ]);
+    }
+
     public function edit($id)
     {
         return view('Profile', [
@@ -86,6 +131,7 @@ class HealthSisController extends Controller
             'prods' => HealthSis::find($id)
         ]);
     }
+
     public function update(Request $request, $id)
     {
         $prod = HealthSis::find($id);
