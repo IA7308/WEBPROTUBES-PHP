@@ -62,3 +62,9 @@ jobs:
         DB_PASSWORD: password
       run: php artisan test
       working-directory: laravel
+    - name: Dump Autoload
+      run: composer dump-autoload
+      working-directory: laravel
+    - name: Clear Cache
+      run: php artisan config:cache
+      working-directory: laravel
