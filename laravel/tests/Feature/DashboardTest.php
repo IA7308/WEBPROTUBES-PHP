@@ -2,10 +2,10 @@
 
 namespace Tests\Feature;
 
+use App\Models\Dashboard;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
-use App\Models\Dashboard;
 
 class DashboardTest extends TestCase
 {
