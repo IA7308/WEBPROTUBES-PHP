@@ -5,7 +5,7 @@ namespace Database\Factories;
 use App\Models\dashboard;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class DashboardFactory extends Factory
+class dashboardFactory extends Factory
 {
     protected $model = dashboard::class;
 
