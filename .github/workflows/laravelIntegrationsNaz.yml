@@ -1,4 +1,4 @@
-name: Integrations Laravel Iqnaz
+name: Laravel
 
 on:
   push:
