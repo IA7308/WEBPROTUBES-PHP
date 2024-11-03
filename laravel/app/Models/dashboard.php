@@ -12,6 +12,6 @@ class Dashboard extends Model
     protected $fillable = [
         "Image",
         "Judul",
-        "Deskripsi"
+        "Deskripsi",
     ];
 }
