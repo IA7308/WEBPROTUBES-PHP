@@ -52,6 +52,10 @@ jobs:
         DB_PASSWORD: password
       run: php artisan migrate
       working-directory: laravel
+    - name: Dump Autoload
+      run: composer dump-autoload
+    - name: Clear Cache
+      run: php artisan config:cache
     - name: Execute tests (Unit and Feature tests) 
       env:
         DB_CONNECTION: mysql
@@ -62,3 +66,5 @@ jobs:
         DB_PASSWORD: password
       run: php artisan test
       working-directory: laravel
+    
+
