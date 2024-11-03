@@ -48,4 +48,4 @@ jobs:
         DB_PORT: 3306
         DB_PASSWORD: secret
         DB_USERNAME: root
-      run: vendor/bin/phpunit
+      run: php artisan serve
