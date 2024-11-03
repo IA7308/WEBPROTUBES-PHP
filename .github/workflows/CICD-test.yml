@@ -35,6 +35,10 @@ jobs:
       run: |
         mkdir -p database
         touch database/database.sqlite
+    #excecute Katalon
+    - name: Run Katalon Studio Tests
+      run: |
+        "C:\\Users\\ASUS\\Katalon Studio\\testing konpel\\Katalon_Studio\\katalonc.bat" -runMode=console -projectPath="C:\\Users\\ASUS\\Katalon Studio\\testing konpel" -reportFolder="C:\\Users\\ASUS\\Katalon Studio\\testing konpel\\Reports\\20240611_213209\\Testing\\20240611_213209" -browserType="Chrome" -apiKey=your_api_key
     - name: Execute tests (Unit and Feature tests) via PHPUnit/Pest
       env:
         DB_CONNECTION: sqlite
