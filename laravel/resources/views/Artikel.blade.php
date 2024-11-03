@@ -9,6 +9,18 @@
     <!--CSS-->
     <link rel="stylesheet" href="./Dashboard.css">
     <link rel="stylesheet" href="./Component/NavBar.css">
+    <style>
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            border-radius: 50%;
+            padding: 10px 20px;
+            font-size: 20px;
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,41 +31,65 @@
     <div class="container" style="margin-top:100px;">
         <!--ITEM 1-->
         @foreach($prods as $d)
-        <div class="card mt-5 mb-3">
-            <div class="row mb-2">
-                <div class="col-md-4">
-                    <img src="{{url('public/Image/'.$d->Image)}}" alt="Food-1" class="img-fluid">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                    @if(session('username')==$d->Created_by || session('username')=='ADMIN')
-                        @component('Component.CompTimeline', ['data' => $d, 'page' => 'artikel'])
-                        @endcomponent
-                    @endif
-                        <h5 class="card-title">{{$d->Judul}}</h5>
-                        <p class="card-text">{{$d->Deskripsi}}</p>
-                        <a href="/Artikel/{{$d->id}}"><input type="button" value="More" class="card-text btn btn-info"></a>
-                    </div>  
+            <div class="card mt-5 mb-3">
+                <div class="row mb-2">
+                    <div class="col-md-4">
+                        <img src="{{url('public/Image/' . $d->Image)}}" alt="Food-1" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            @if(session('username') == $d->Created_by || session('username') == 'ADMIN')
+                                @component('Component.CompTimeline', ['data' => $d, 'page' => 'artikel'])
+                                @endcomponent
+                            @endif
+                            <h5 class="card-title">{{$d->Judul}}</h5>
+                            <p class="card-text">{{$d->Deskripsi}}</p>
+                            <a href="/Artikel/{{$d->id}}"><input type="button" value="More"
+                                    class="card-text btn btn-info"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
         @endforeach
-     
+
         <div class="row mt-3 mb-3 items-center">
             <input type="button" value="More" class="btn btn-primary">
         </div>
         <div class="row mb-5 text-center">
-            <a href="/artikel/{{session('id')}}/create-artikel"><input type="button" value="Create" class="btn btn-primary" id="CreateArtikel" style="width: 1310px"></a>
+            <a href="/artikel/{{session('id')}}/create-artikel"><input type="button" value="Create"
+                    class="btn btn-primary" id="CreateArtikel" style="width: 1310px"></a>
         </div>
         <!--ITEM 4-->
     </div>
+
+    <!-- Tombol Scroll-Up -->
+    <button id="scrollUpBtn" class="btn btn-secondary" title="Scroll to Top" style="display: none;">
+        &uarr;
+    </button>
+
 </body>
 
 <script src="/Default.js"></script>
 
 <script>
-    window.onload = function() {
+    window.onload = function () {
         cekLogin();
         cekAdmin();
+    };
+
+    // Scroll Up
+    window.onscroll = function () {
+        let button = document.getElementById("scrollUpBtn");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    };
+    document.getElementById("scrollUpBtn").onclick = function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     };
 </script>
