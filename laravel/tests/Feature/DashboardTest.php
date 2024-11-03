@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use App\Models\Dashboard;
+use App\Models\dashboard;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -15,7 +15,7 @@ class DashboardTest extends TestCase
     public function it_can_display_products_on_dashboard()
     {
         // Membuat produk untuk pengujian
-        $product = Dashboard::factory()->create();
+        $product = dashboard::factory()->create();
 
         // Mengakses dashboard
         $response = $this->get('/Dashboard');

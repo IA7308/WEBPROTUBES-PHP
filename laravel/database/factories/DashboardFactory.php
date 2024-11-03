@@ -2,12 +2,12 @@
 
 namespace Database\Factories;
 
-use App\Models\Dashboard;
+use App\Models\dashboard;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class DashboardFactory extends Factory
 {
-    protected $model = Dashboard::class;
+    protected $model = dashboard::class;
 
     public function definition()
     {
