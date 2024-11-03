@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\dashboard;
+use App\Models\Dashboard;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
     public function index()
     {
-        $prods = dashboard::all();
-        $newProds = dashboard::orderBy('created_at', 'desc')->take(6)->get();
-        $totalProducts = dashboard::count();
-        $mostViewed = dashboard::orderBy('views', 'desc')->first();
-        $topCategory = dashboard::select('category')
+        $prods = Dashboard::all();
+        $newProds = Dashboard::orderBy('created_at', 'desc')->take(6)->get();
+        $totalProducts = Dashboard::count();
+        $mostViewed = Dashboard::orderBy('views', 'desc')->first();
+        $topCategory = Dashboard::select('category')
             ->groupBy('category')
             ->orderByRaw('COUNT(*) DESC')
             ->first();
@@ -33,7 +33,7 @@ class DashboardController extends Controller
 
     public function store(Request $request)
     {
-        $prod = new dashboard;
+        $prod = new Dashboard;
         $prod->Judul = $request->Judul;
         if ($request->file('Image')) {
             $file = $request->file('Image');
@@ -48,7 +48,7 @@ class DashboardController extends Controller
 
     public function destroy($id)
     {
-        $data = dashboard::findOrFail($id);
+        $data = Dashboard::findOrFail($id);
         $data->delete();
         return redirect('/Dashboard');
     }
@@ -59,13 +59,13 @@ class DashboardController extends Controller
             'title' => 'Edit',
             'method' => 'PUT',
             'action' => "/dashboard/$id/update",
-            'data' => dashboard::find($id)
+            'data' => Dashboard::find($id)
         ]);
     }
 
     public function update(Request $request, $id)
     {
-        $prod = dashboard::find($id);
+        $prod = Dashboard::find($id);
         $prod->Judul = $request->Judul;
         if ($request->file('Image')) {
             $file = $request->file('Image');
