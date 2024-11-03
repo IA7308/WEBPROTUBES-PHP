@@ -76,4 +76,14 @@ class ArtikelController extends Controller
         artikel::destroy($id);
         return redirect('/artikel')->with('msg', 'Hapus berhasil');
     }
+
+    public function search(Request $request)
+{
+    $query = $request->input('query');
+
+    $prods = artikel::where('Judul', 'LIKE', "%{$query}%")->get();
+
+    return view('Search', compact('prods'))->with('query', $query);
+}
+
 }
