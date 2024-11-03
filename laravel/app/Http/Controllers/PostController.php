@@ -23,6 +23,12 @@ class PostController extends Controller
             'prods' => HealthSis::find($id)
         ]);
     }
+
+    public function OrderBy(){
+        $prods = Post::orderBy('created_at', 'desc')->get();
+        return view('Timeline', compact('prods'));
+    }
+
     public function store(Request $request, $id)
     {
         $user = HealthSis::find($id);
