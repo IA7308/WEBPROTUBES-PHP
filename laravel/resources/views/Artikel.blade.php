@@ -38,7 +38,7 @@
             </div>
         </div>
         @endforeach
-     
+        <p>Total Articles: {{ $count }}</p>
         <div class="row mt-3 mb-3 items-center">
             <input type="button" value="More" class="btn btn-primary">
         </div>
