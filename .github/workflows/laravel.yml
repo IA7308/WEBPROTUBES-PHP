@@ -1,4 +1,4 @@
-name: Laravel Integrations
+name: Laravel Integrations PHPUnit Test
 
 on:
   push:
