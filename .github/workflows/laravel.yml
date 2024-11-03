@@ -54,8 +54,10 @@ jobs:
       working-directory: laravel
     - name: Dump Autoload
       run: composer dump-autoload
+      working-directory: laravel
     - name: Clear Cache
       run: php artisan config:cache
+      working-directory: laravel
     - name: Execute tests (Unit and Feature tests) 
       env:
         DB_CONNECTION: mysql
