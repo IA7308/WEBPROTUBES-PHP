@@ -15,7 +15,11 @@ class DashboardTest extends TestCase
     public function it_can_display_products_on_dashboard()
     {
         // Membuat produk untuk pengujian
-        $product = Dashboard::factory()->create();
+        $product = Dashboard::create([
+            'Judul' => 'Nasi Bali',
+            'Deskripsi' => 'Nasi bali with healthy spices',
+            'Image' => 'image.jpg',
+        ]);
 
         // Mengakses Dashboard
         $response = $this->get('/Dashboard');
