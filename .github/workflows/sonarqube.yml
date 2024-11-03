@@ -54,7 +54,7 @@ jobs:
         with:
           # Additional arguments for the sonarcloud scanner
           args: |
-            -Dsonar.projectKey= IA7308_WEBPROTUBES-PHP_ccb547f3-766f-433a-8c94-c4b2c20d599e
-            -Dsonar.sources= ./laravel/
-            -Dsonar.verbose= true
-            -Dsonar.projectBaseDir= ./laravel/
+            -Dsonar.projectKey=IA7308_WEBPROTUBES-PHP_ccb547f3-766f-433a-8c94-c4b2c20d599e
+            -Dsonar.sources=./laravel/
+            -Dsonar.verbose=true
+            -Dsonar.projectBaseDir=./laravel/
