@@ -42,7 +42,7 @@ Route::put('/menudiet/{id}/update', [menudietController::class, 'update']);
 
 //LOGIN REGISTER, PROFILE
 Route::get('/Login', [HealthSisController::class, 'Login']);
-Route::get('/LoginCheck', [HealthSisController::class, 'LoginCheck']);
+Route::get('/LoginCheck', [HealthSisController::class, 'LoginCheck'])->name('LoginCheck');
 Route::get('/logout', [HealthSisController::class, 'logout']);
 Route::get('/register', [HealthSisController::class, 'create']);
 Route::post('/store', [HealthSisController::class, 'store']);
