@@ -7,13 +7,17 @@ use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
-    /**
-     * A basic test example.
-     */
-    public function test_the_application_returns_a_successful_response(): void
+    /** @test */
+
+    use RefreshDatabase; 
+    
+    public function index_displays_the_correct_article_count()
     {
-        $response = $this->get('/');
+        Artikel::factory()->count(5)->create();
+
+        $response = $this->get('/artikel');
 
         $response->assertStatus(200);
+        $response->assertViewHas('count', 5);
     }
 }
