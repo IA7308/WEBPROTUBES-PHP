@@ -28,7 +28,14 @@
     @component('Component.Navbar')
     @endcomponent
     <!--KONTEN-->
+
     <div class="container" style="margin-top:100px;">
+    <div class="container mt-3">
+        <form action="{{ route('artikel.search') }}" method="GET" class="d-flex">
+            <input type="text" name="query" class="form-control me-2" placeholder="Search by Title" value="{{ request('query') }}">
+            <button type="submit" class="btn btn-outline-success">Search</button>
+        </form>
+    </div>
         <!--ITEM 1-->
         @foreach($prods as $d)
             <div class="card mt-5 mb-3">
@@ -50,7 +57,7 @@
                     </div>
                 </div>
             </div>
-        @endforeach
+        @endforeach 
 
         <div class="row mt-3 mb-3 items-center">
             <input type="button" value="More" class="btn btn-primary">
