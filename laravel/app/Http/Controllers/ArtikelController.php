@@ -11,7 +11,8 @@ class ArtikelController extends Controller
     public function index()
     {
         $prods = artikel::all();
-        return view('Artikel', compact('prods'));
+        $count = artikel::count();
+        return view('Artikel', compact('prods', 'count'));
     }
 
     public function create($id)
