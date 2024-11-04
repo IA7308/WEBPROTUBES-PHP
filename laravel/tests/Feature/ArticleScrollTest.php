@@ -6,7 +6,7 @@ use Tests\TestCase;
 
 class ArticleScrollTest extends TestCase
 {
-    public function test_artikel_page_loads_successfully(): void
+    public function test_article_ScrollUp_Successfully(): void
     {
         $response = $this->get('/artikel');
         $response->assertStatus(200);
