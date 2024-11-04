@@ -62,6 +62,8 @@
         <div class="row mt-3 mb-3 items-center">
             <input type="button" value="More" class="btn btn-primary">
         </div>
+
+        <p>Total Articles: {{ $count }}</p>
         <div class="row mb-5 text-center">
             <a href="/artikel/{{session('id')}}/create-artikel"><input type="button" value="Create"
                     class="btn btn-primary" id="CreateArtikel" style="width: 1310px"></a>
