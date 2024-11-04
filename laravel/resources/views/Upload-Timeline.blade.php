@@ -19,7 +19,7 @@
     <div class="container" style="margin-top:7%;">
         <div class="row">
             <div class="col-2">
-                <img src="{{url('public/Image/'.$prods->Image)}}" alt="BigMan" class="rounded-circle"
+                <img src="{{url('public/Image/'.$prods->Image) ?? url('public/Image/default.jpg')}}" alt="BigMan" class="rounded-circle"
                     style="width: 100%; position: relative;">
             </div>
             <div class="col-10">

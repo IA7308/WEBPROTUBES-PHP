@@ -33,7 +33,8 @@ class HealthSisController extends Controller
         $password = $request->password;
 
         $user = HealthSis::where('Email', $email)->first();
-        if ($user && password_verify($password, $user->password)) {
+        if (Auth::attempt(['Email' => $email, 'password' => $password])) {
+            $user = Auth::user();
             session(['username' => $user->Username]);
             session(['id' => $user->id]);
             session(['statusLogin' => true]);

@@ -42,7 +42,7 @@ Route::put('/menudiet/{id}/update', [menudietController::class, 'update']);
 
 //LOGIN REGISTER, PROFILE
 Route::get('/Login', [HealthSisController::class, 'Login']);
-Route::get('/LoginCheck', [HealthSisController::class, 'LoginCheck']);
+Route::get('/LoginCheck', [HealthSisController::class, 'LoginCheck'])->name('LoginCheck');
 Route::get('/logout', [HealthSisController::class, 'logout']);
 Route::get('/register', [HealthSisController::class, 'create']);
 Route::post('/store', [HealthSisController::class, 'store']);
@@ -51,6 +51,7 @@ Route::get('/HealthSis/{id}/edit', [HealthSisController::class, 'edit']);
 Route::delete('/HealthSis/{id}/delete', [HealthSisController::class, 'delete']);
 //Timeline
 Route::get('/timeline', [PostController::class, 'index'])->name('post.index');
+Route::get('/timelineOrderBy', [PostController::class, 'OrderBy'])->name('post.orderby');
 Route::get('/timeline/{id}/create-timeline', [PostController::class, 'create'])->name('post.create');
 Route::post('/timeline/{id}/store', [PostController::class, 'store'])->name('post.store');
 Route::put('/timeline/{id}/{iduser}/update', [PostController::class, 'update'])->name('post.update');

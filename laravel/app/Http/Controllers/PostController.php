@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\HealthSis;
 use App\Models\Post;
+use Auth;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -11,7 +12,13 @@ class PostController extends Controller
     public function index()
     {
         $prods = Post::all();
-        return view('Timeline', compact('prods'));
+        $id = Auth::id();
+        return view('Timeline', [
+            'prods' => $prods,
+            'method' => 'POST',
+            'action' => "/timeline/$id/store",
+            'user' => HealthSis::find(Auth::id())
+        ]);
     }
 
     public function create($id)
@@ -23,6 +30,18 @@ class PostController extends Controller
             'prods' => HealthSis::find($id)
         ]);
     }
+
+    public function OrderBy(){
+        $prods = Post::orderBy('created_at', 'desc')->get();
+        $id = Auth::id();
+        return view('Timeline', [
+            'prods' => $prods,
+            'method' => 'POST',
+            'action' => "/timeline/$id/store",
+            'user' => HealthSis::find(Auth::id())
+        ]);
+    }
+
     public function store(Request $request, $id)
     {
         $user = HealthSis::find($id);
