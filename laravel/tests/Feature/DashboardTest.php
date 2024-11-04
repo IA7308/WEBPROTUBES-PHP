@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use App\Models\Dashboard;
+// use App\Models\Dashboard;
 use App\Models\HealthSis;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Foundation\Testing\RefreshDatabase;
