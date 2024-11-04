@@ -3,7 +3,7 @@
 namespace Tests\Feature;
 
 use Tests\TestCase;
-use App\Models\Artikel;
+use App\Models\artikel;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ArtikelTest extends TestCase
