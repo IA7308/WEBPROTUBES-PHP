@@ -15,7 +15,40 @@ class ExampleTest extends TestCase
     
     public function index_displays_the_correct_article_count()
     {
-        Artikel::factory()->count(5)->create();
+        artikel::create([
+            'Judul' => 'Testing',
+            'Deskripsi' => 'contoh deskripsi.',
+            'Image' => 'sample_image.jpg',
+            'Created_by' => 'test_user',
+        ]);
+
+        artikel::create([
+            'Judul' => 'Testing',
+            'Deskripsi' => 'contoh deskripsi.',
+            'Image' => 'sample_image.jpg',
+            'Created_by' => 'test_user',
+        ]);
+
+        artikel::create([
+            'Judul' => 'Testing',
+            'Deskripsi' => 'contoh deskripsi.',
+            'Image' => 'sample_image.jpg',
+            'Created_by' => 'test_user',
+        ]);
+
+        artikel::create([
+            'Judul' => 'Testing',
+            'Deskripsi' => 'contoh deskripsi.',
+            'Image' => 'sample_image.jpg',
+            'Created_by' => 'test_user',
+        ]);
+
+        artikel::create([
+            'Judul' => 'Testing',
+            'Deskripsi' => 'contoh deskripsi.',
+            'Image' => 'sample_image.jpg',
+            'Created_by' => 'test_user',
+        ]);
 
         $response = $this->get('/artikel');
 
