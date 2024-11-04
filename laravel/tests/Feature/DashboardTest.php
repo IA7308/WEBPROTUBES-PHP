@@ -2,17 +2,17 @@
 
 namespace Tests\Feature;
 
-// use App\Models\Dashboard;
+use App\Models\Dashboard;
 use App\Models\HealthSis;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Http\UploadedFile;
 use Tests\TestCase;
 
 class DashboardTest extends TestCase
 {
-    use RefreshDatabase; 
-
+    // use RefreshDatabase;
 
     protected $user;
     protected $oldPassword = 'password123';
@@ -40,12 +40,13 @@ class DashboardTest extends TestCase
     /** @test */
     public function it_can_display_products_on_dashboard()
     {
+        $filePath = public_path('assets\37nasibali.webp');
         // Membuat produk untuk pengujian
-        // Dashboard::create([
-        //     'Judul' => 'Nasi Bali',
-        //     'Deskripsi' => 'Nasi bali with healthy spices',
-        //     'Image' => 'image.jpg',
-        // ]);
+        Dashboard::create([
+            'Judul' => 'Nasi Bali',
+            'Deskripsi' => 'Nasi bali with healthy spices',
+            'Image' => $filePath,
+        ]);
 
         // Mengakses Dashboard
         $response = $this->get('/Dashboard');
@@ -54,6 +55,6 @@ class DashboardTest extends TestCase
         $response->assertStatus(200);
 
         // Memastikan produk ditampilkan di halaman
-        // $response->assertSee();
+        $response->assertSee('Nasi Bali');
     }
 }
