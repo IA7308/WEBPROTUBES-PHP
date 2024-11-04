@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Dashboard
-Route::get('/Dashboard', [HealthSisController::class, 'index']);
+Route::get('/Dashboard', [DashboardController::class, 'index']);
 Route::get('/createDashboard', [DashboardController::class, 'create']);
 Route::post('/storeDashboard', [DashboardController::class, 'store']);
 Route::delete('/dashboard/{id}/delete', [DashboardController::class, 'destroy']);
@@ -49,6 +49,8 @@ Route::post('/store', [HealthSisController::class, 'store']);
 Route::put('/HealthSis/{id}/update', [HealthSisController::class, 'update']);
 Route::get('/HealthSis/{id}/edit', [HealthSisController::class, 'edit']);
 Route::delete('/HealthSis/{id}/delete', [HealthSisController::class, 'delete']);
+Route::post('/change-password/{id}', [HealthSisController::class, 'changePassword']);
+
 //Timeline
 Route::get('/timeline', [PostController::class, 'index'])->name('post.index');
 Route::get('/timeline/{id}/create-timeline', [PostController::class, 'create'])->name('post.create');

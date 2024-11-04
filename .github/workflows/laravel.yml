@@ -26,7 +26,6 @@ jobs:
           --health-interval=10s
           --health-timeout=5s
           --health-retries=3
-
     steps:
     - uses: shivammathur/setup-php@v2
       with:
@@ -62,4 +61,10 @@ jobs:
         DB_USERNAME: user
         DB_PASSWORD: password
       run: php artisan test
+      working-directory: laravel
+    - name: Dump Autoload
+      run: composer dump-autoload
+      working-directory: laravel
+    - name: Clear Cache
+      run: php artisan config:cache
       working-directory: laravel
