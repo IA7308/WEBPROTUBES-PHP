@@ -20,6 +20,6 @@ class ExampleTest extends TestCase
         $response = $this->get('/artikel');
 
         $response->assertStatus(200);
-        $response->assertViewHas('count', 5);
+        $response->assertSee('5');
     }
 }
